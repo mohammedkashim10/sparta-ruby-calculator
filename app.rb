@@ -3,7 +3,22 @@ calculator = gets.chomp
 if calculator == "a"
   puts "You have chosen the advanced calculator. Which operation would you like? Choose from (e)power and (f)square root"
   advOp = gets.chomp
-elsif calculator == "b"
+  case advOp
+  when "e"
+    puts "Please enter your first number"
+    numA = gets.chomp
+    puts "Please enter your second number"
+    numB = gets.chomp
+    ansPow = numA.to_i ** numB.to_i
+    puts "#{numA} to the power of #{numB} = #{ansPow}"
+  when "f"
+    puts "Please enter your number"
+    numC = gets.chomp
+    ansSqrt = Math.sqrt(numC.to_i)
+    puts "√#{numC} is #{ansSqrt}"
+  end
+
+  elsif calculator == "b"
   puts "You have chosen the basic calculator. Which operation would you like? Choose from (a)addition, (b)subtraction, (c)multiplication, (d)divide"
   bscOp = gets.chomp
   puts "Please enter your first number"
